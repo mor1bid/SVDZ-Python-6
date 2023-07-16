@@ -19,14 +19,14 @@ col = list()
 line = list()
 print("\n2. Введите через Enter желаемый ряд и клетку (в диапазоне 1-8 каждое) ")
 
-# while i < 8:
-#     c = int(input((f"{i + 1}: ")))
-#     col.append(c - 1)
-#     l = int(input((f"{i + 1}: ")))
-#     line.append(l - 1)
-#     i += 1
+while i < 8:
+    c = int(input((f"{i + 1}: ")))
+    col.append(c - 1)
+    l = int(input((f"{i + 1}: ")))
+    line.append(l - 1)
+    i += 1
 
-# setting(col, line)
+setting(col, line)
 
 # 3 Напишите функцию в шахматный модуль. 
 # Используйте генератор случайных чисел для случайной расстановки ферзей 
