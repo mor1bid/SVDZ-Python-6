@@ -16,11 +16,15 @@ def bigame(flawless = True, _rook = None):
         for j in range(len(_board)):
             if _board[i][j] == 11:
                 _rook = _board[i][j]
-            for k in range(len(_board)):
-                for l in range(len(_board)):
-                    if _board[k][l] == _rook and i == k and j != l or _board[k][l] == _rook and i != k and j == l:
-                        flawless = False
-                        return flawless
+                for k in range(len(_board)):
+                    for l in range(len(_board)):
+                        if (_board[k][l] == _rook and i == k and j != l 
+                        or _board[k][l] == _rook and i != k and j == l
+                        or _board[k][l] == _rook and i == k + 1 and j == l + 1
+                        or _board[k][l] == _rook and i == k - 1 and j == l - 1):
+                            flawless = False
+                            return flawless
+    return flawless
 
 def setting(cols, lines):
     for i in range(len(_board)):
@@ -42,7 +46,7 @@ def rndgame():
             i += 1
         setting(cols, lines)
     
-
-# col = [5, 7, 3, 4, 5, 0, 1, 2]
-# line = [2, 0, 1, 4, 5, 2, 1, 2]
-# setting(col, line)
+# debug
+col = [0, 1, 2, 3, 4, 5, 6, 7]
+line = [3, 0, 4, 7, 1, 6, 2, 5]
+setting(col, line)

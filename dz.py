@@ -1,6 +1,7 @@
-# import mod_DMY
+import mod_DMY
 from mod_rookgame import setting
 from mod_rookgame import rndgame
+
 # 1 В модуль с проверкой даты добавьте возможность запуска в терминале 
 # с передачей даты на проверку.
 
@@ -21,7 +22,7 @@ print("\n2. Введите через Enter желаемый ряд и клет�
 # while i < 8:
 #     c = int(input((f"{i + 1}: ")))
 #     col.append(c - 1)
-#     l = int(input((": ")))
+#     l = int(input((f"{i + 1}: ")))
 #     line.append(l - 1)
 #     i += 1
 
