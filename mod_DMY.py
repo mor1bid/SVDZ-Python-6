@@ -13,10 +13,9 @@ def _supereal(date, res = ''):
     date = date.split('.')
     if int(date[2]) % 4 == 0 or int(date[2]) % 100 == 0 and int(date[2]) % 400 == 0:
         res = 'високосный'
-        return res
     else:
         res = 'невисокосный'
-        return res
+    return res
 
 date = input("1. Здравствуйте. Введите желаемую дату в формате день.месяц.год\n: ")
 print("Данный год -", super(date))
